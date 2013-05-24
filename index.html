@@ -323,6 +323,10 @@ YUI().use("dd", "plugin", "dd-plugin-momentum", function(Y){
           // add momentum
           dd.plug(Y.DDMomentumPlugin);
 });
+// Prevent iOS from moving the window around on drags
+document.body.addEventListener('touchmove', function (ev) { 
+  ev.preventDefault();
+});
 </script>
 </body>
 </html>
